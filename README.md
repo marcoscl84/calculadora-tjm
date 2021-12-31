@@ -6,3 +6,5 @@ Projeto elaborado utilizando Javascript para efetuar os cálculos e exibir no di
 PHP também foi utilizado afim de receber os dados e armazenar no banco MySQL.
 
 Para estrutura visual, foi utilizado Bootstrap.
+
+O resultado está disponível em https://www.tjmrs.jus.br/testes/conte/calculadora-exercicio/index.php
