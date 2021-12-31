@@ -155,13 +155,15 @@
 
         $sqlDelete = "DELETE FROM testeProjetoCalculo WHERE id=$id";
         if (mssql_query($sqlDelete, $conn)) {
-            ?> <script> alert("Registro Excluído!"); </script> <?php
+            ?> <script> alert("Registro Excluído!"); 
+                        // elimina variáveis da URL
+                        window.history.pushState("object or string", "Title", "https://www.tjmrs.jus.br/testes/conte/calculadora-exercicio/index.php");
+            </script> <?php
         } else {
-            ?> <script> alert("oooops! Registro não excluído"); </script> <?php
+            ?> <script> alert("oooops! Registro não excluído"); 
+                        window.history.pushState("object or string", "Title", "https://www.tjmrs.jus.br/testes/conte/calculadora-exercicio/index.php");
+            </script> <?php
         }
-
-        // provocar reload pra resetar o link da pag
-        // https://www.tjmrs.jus.br/testes/conte/calculadora-exercicio/index.php
     }  
     
 ?>
@@ -263,6 +265,7 @@
         </form>
     </div>
 </div>
+<br>
 
 <?php
         $sql = "SELECT TOP 10 dataHoraCadastro, id, operacao, resultado 
@@ -307,10 +310,7 @@
         <?php } ?>
         </tbody>    
     </table>        
-    
-
 </body>
 </html>
 
-<!-- resetar o link da pag após exclusão de registro -->
 <!-- elaborar possibilidade de usar mouse -->
